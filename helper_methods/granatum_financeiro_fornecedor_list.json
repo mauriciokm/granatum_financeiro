@@ -1,0 +1,18 @@
+{
+  "name": "lista de fornecedores",
+  "helper_method_key": "granatum_financeiro_fornecedor_list",
+  "requests": [ 
+  	{
+      "method_name": "/fornecedores.json",
+      "params": {},
+        "mapping": {
+        "label": {
+          "fields": ["descricao"]
+        },
+        "value": {
+          "field": "id"
+        }
+      }  
+    }
+  ]
+}

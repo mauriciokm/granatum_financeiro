@@ -1,0 +1,18 @@
+{
+  "name": "lista de contas",
+  "helper_method_key": "granatum_financeiro_conta_list",
+  "requests": [ 
+  	{
+      "method_name": "/contas.json",
+      "params": {},
+        "mapping": {
+        "label": {
+          "fields": ["descricao"]
+        },
+        "value": {
+          "field": "id"
+        }
+      }  
+    }
+  ]
+}

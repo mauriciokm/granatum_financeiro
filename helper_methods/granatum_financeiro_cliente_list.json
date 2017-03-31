@@ -1,0 +1,18 @@
+{
+  "name": "lista de clientes",
+  "helper_method_key": "granatum_financeiro_cliente_list",
+  "requests": [ 
+  	{
+      "method_name": "/clientes.json",
+      "params": {},
+        "mapping": {
+        "label": {
+          "fields": ["descricao"]
+        },
+        "value": {
+          "field": "id"
+        }
+      }  
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Granatum Financeiro",
+  "app_id": "granatum_financeiro",
+  "color": "#00579B",
+  "description": {
+    "pt_BR":"O Granatum Financeiro é uma plataforma completa de gestão financeira para micro e pequenas empresas. Possibilita o registro das suas contas a pagar e receber, acompanhar o fluxo de caixa em tempo real, emitir NFS-e e gerar cobranças de forma automática e sem complicação.", 
+      "en": "Granatum Financeiro is a complete financial Saas tool for small businesses. It enables registration of your payable and receivable accounts, monitors cash flow in real time, sends NFS-e and generates invoices automatically in a simple way."
+    },
+  "website": "http://www.granatum.com.br/financeiro/",
+  "signup_url": "https://contas.granatum.com.br/users/sign_up/",
+  "api_base_uri": {"production": {"uri": "https://api.granatum.com.br/v1", "label": "Produção", "default": true}
+  },
+  "authentication": {
+
+    "ping_request": {
+      "method_name": "/contas"
+    },
+    "type": "pass_through_query_string", 
+    "fields": [
+      {"name": "access_token", "label": "Access Token", "type": "password", "validations": [{"name": "min_length", "value": 64}, {"name": "max_length", "value": 64}]}
+    ],
+    "tutorial": {
+      "link": "Onde encontrar o Access Token de Produção no Granatum?",
+      "steps": [
+        {"title": "Passo 1",
+         "content": "Acesse granatum.com.br/financeiro e clique no botão Acessar no canto superior direito.",
+         "img_url": "http://granatum.com.br/financeiro/img/tutorial-pluga/passo-1.png"},
+        {"title": "Passo 2",
+         "content": "Entre com o seu usuário e senha caso não esteja logado.",
+         "img_url": "http://granatum.com.br/financeiro/img/tutorial-pluga/passo-2.png"},
+        {"title": "Passo 3",
+         "content": "No menu superior clique em Configurações.",
+         "img_url": "http://granatum.com.br/financeiro/img/tutorial-pluga/passo-3.png"},
+        {"title": "Passo 4",
+         "content": "No menu que se abrirá, clique na opção Minha Empresa.",
+         "img_url": "http://granatum.com.br/financeiro/img/tutorial-pluga/passo-4.png"},
+        {"title": "Passo 5",
+         "content": "Nas opções do lado direito da tela, procure a seção Token da API e clique em Gerar Token.",
+         "img_url": "http://granatum.com.br/financeiro/img/tutorial-pluga/passo-5.png"},
+        {"title": "Passo 6",
+         "content": "Pronto, seu Token foi gerado!",
+         "img_url": "http://granatum.com.br/financeiro/img/tutorial-pluga/passo-6.png"}
+      ]
+    }
+  }
+}
