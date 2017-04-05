@@ -217,6 +217,19 @@
         "data_type": "string"
       },
       {
+        "key": "pessoa_id",
+        "name": {"pt_BR": "e-mail do cliente", "en": "client e-mail"},
+        "description": {
+          "pt_BR": "E-mail do cliente.",
+          "en": "Client e-mail."
+        },
+        "required": false,
+        "visible": false,
+        "advanced": false,
+        "field_type": "integer",
+        "data_type": "integer"
+      },
+      {
         "key": "fornecedor_email",
         "name": {"pt_BR": "e-mail do fornecedor", "en": "supplier e-mail"},
         "description": {
