@@ -3,7 +3,10 @@
   app_target: 'granatum_financeiro',
   filters: [[{field: 'status', condition: 'equal', value: 'pending'}]],
   mapper: [
-  // include mapping
+    {"key": "data_vencimento", "content": "{{due_date}}"},
+    {"key": "descricao", "content": "{{items.descriptions}}"},
+    {"key": "valor", "content": "{{total}}"},
+    {"key": "cliente_email", "content": "{{email}}"},
   ],
   trigger_key: 'new_transactions',
   action_key: 'add_recebimento',
@@ -25,7 +28,12 @@
   app_target: 'granatum_financeiro',
   filters: [[{field: 'status', condition: 'equal', value: 'paid'}]],
   mapper: [
-  // include mapping
+    {"key": "data_vencimento", "content": "{{due_date}}"},
+    {"key": "data_vencimento", "content": "{{paid_at}}"},
+    {"key": "descricao", "content": "{{items.descriptions}}"},
+    {"key": "valor", "content": "{{paid_cents_decimal}}"},
+    {"key": "cliente_email", "content": "{{payer.email}}"},
+    {"key": "cliente_nome", "content": "{{payer.name}}"},
   ],
   trigger_key: 'new_transactions',
   action_key: 'add_recebimento',
